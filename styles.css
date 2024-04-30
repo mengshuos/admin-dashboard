@@ -31,8 +31,55 @@
 
 .header {
     background-color: beige;
+    display: grid;
+    padding-left: 2vw;
+}
+
+.header-top, .header-bot {
+    display: grid;
+    grid-auto-flow: column;
+    align-items: center;
+}
+
+button {
+    justify-self: center;
+    border-radius: 10px;
 }
 
 .dashboard {
     background-color: rgb(185, 185, 185);
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+}
+
+.your-projects {
+    grid-row: 1 / 3;
+}
+
+.project-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+}
+
+.project, .announcements-container, .trending-container {
+    background-color: whitesmoke;
+}
+
+.commands {
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: end;
+    gap: 5px;
+}
+
+.announcements-container {
+    display: grid;
+    gap: 10px;
+}
+
+.trending-container {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    gap: 10px;
 }
