@@ -20,7 +20,7 @@
 .nav-bar {
     background-color: #dc2626;
     color: white;
-    font-size: 2.4vh;
+    font-size: 2vh;
     font-weight: 600;
     grid-row: 1 / 3;
     display: grid;
@@ -30,11 +30,14 @@
     grid-auto-rows: min-content;
 }
 
-.nav-link {
+.nav-head-link, .nav-link {
     grid-column: 1 / 3;
     display: grid;
     grid-template-columns: subgrid;
     align-items: center;
+}
+
+.nav-head-link, .nav-link, .header-link {
     text-decoration: none;
     color: inherit;
 }
@@ -68,28 +71,99 @@
 }
 
 
-
 .header {
-    background-color: beige;
     display: grid;
     padding-left: 2vw;
+    padding-right: 4vw;
+    position: relative;
+    box-shadow: 0 5px 10px rgb(187, 187, 187);
 }
 
 .header-top, .header-bot {
     display: grid;
-    grid-auto-flow: column;
     align-items: center;
+    gap: 1.4vw;
+}
+
+.header-top {
+    grid-template-columns: 30px 1fr 30px 50px auto;
+    justify-items: center;
+    padding-bottom: 2vh;
+}
+
+.header-bot {
+    grid-template-columns: 80px 1fr auto auto auto;
+    font-weight: 700;
+    padding-bottom: 1.5vh;
+}
+
+#search {
+    justify-self: start;
+    height: 3.5vh;
+    width: 50vw;
+    border-radius: 50px;
+    border: none;
+    background-color: rgb(231, 231, 240);
+    padding: 0.5vh 0 0.5vh 1vw;
+    font-size: 2vh;
+}
+
+#search:focus {
+    outline: none;
+}
+
+.header-icon {
+    height: 30px;
+}
+
+.profile {
+    font-weight: 700;
+    font-size: 2.4vh;
+}
+
+.profile-pic {
+    border-radius: 50%;
+    height: 50px;
+}
+
+.profile-pic-large {
+    border-radius: 50%;
+    height: 80px;
 }
 
 button {
     justify-self: center;
-    border-radius: 10px;
+    border-radius: 50px;
+    padding: 1vh 1vw;
+    width: 6.3vw;
+    background-color: #dc2626;
+    color: white;
+    border: none;
+    font-size: 2vh;
+    font-weight: inherit;
+}
+
+button:hover {
+    background-color: #d12424;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgb(235, 168, 168);
+}
+
+.greet-text {
+    font-size: 1.8vh;
+    padding-bottom: 0.3vh;
+}
+
+.greet-name {
+    font-size: 3vh;
 }
 
 .dashboard {
-    background-color: rgb(185, 185, 185);
+    background-color: rgb(218, 218, 218);
     display: grid;
     grid-template-columns: 3fr 1fr;
+    padding: 3vh 2vw 0 2vw;
+    gap: 30px;
 }
 
 .your-projects {
@@ -98,19 +172,42 @@ button {
 
 .project-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(20vw, 1fr));
     gap: 30px;
 }
 
+.project {
+    height: 22vh;
+    font-size: 2vh; 
+}
+
+.desc {
+    height: 70%;
+}
+
 .project, .announcements-container, .trending-container {
-    background-color: whitesmoke;
+    background-color: rgb(247, 247, 247);
+    box-shadow: 0 5px 10px rgb(187, 187, 187);
+    border-radius: 10px;
+    padding: 5vh 2.4vw 3.8vh 2vw;
+}
+
+.title, .dashboard-title {
+    font-size: 2.5vh;
+    padding-bottom: 1vh;
+    font-weight: 500;
 }
 
 .commands {
     display: grid;
-    grid-auto-flow: column;
+    grid-template-columns: 30px 30px 30px;
     justify-content: end;
-    gap: 5px;
+    gap: 1.8vw;
+}
+
+.command-icon {
+    height: 30px;
+    filter: invert(51%) sepia(6%) saturate(206%) hue-rotate(91deg) brightness(91%) contrast(86%);
 }
 
 .announcements-container {
