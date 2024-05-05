@@ -37,7 +37,7 @@
     align-items: center;
 }
 
-.nav-head-link, .nav-link, .header-link {
+.nav-head-link, .nav-link, .header-link, .removed-a {
     text-decoration: none;
     color: inherit;
 }
@@ -123,7 +123,8 @@
 
 .profile-pic {
     border-radius: 50%;
-    height: 50px;
+    height: 55px;
+    width: 55px;
 }
 
 .profile-pic-large {
@@ -162,7 +163,7 @@ button:hover {
     background-color: rgb(218, 218, 218);
     display: grid;
     grid-template-columns: 3fr 1fr;
-    padding: 3vh 2vw 0 2vw;
+    padding: 3vh 2vw 3vh 2vw;
     gap: 30px;
 }
 
@@ -172,13 +173,8 @@ button:hover {
 
 .project-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(20vw, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     gap: 30px;
-}
-
-.project {
-    height: 22vh;
-    font-size: 2vh; 
 }
 
 .desc {
@@ -189,13 +185,26 @@ button:hover {
     background-color: rgb(247, 247, 247);
     box-shadow: 0 5px 10px rgb(187, 187, 187);
     border-radius: 10px;
-    padding: 5vh 2.4vw 3.8vh 2vw;
+    padding: 4vh 2.4vw 3.8vh 2.4vw;
+}
+
+.project {
+    height: 22vh;
+    font-size: 2vh;
+    box-shadow: 5px 5px 10px rgb(187, 187, 187);
+    background-image: linear-gradient(to right, #e2b434 2%, rgba(0,0,0,0) 2%); 
+    display: flex;
+    flex-direction: column;
 }
 
 .title, .dashboard-title {
     font-size: 2.5vh;
     padding-bottom: 1vh;
     font-weight: 500;
+}
+
+.title {
+    padding-bottom: 0.4vh;
 }
 
 .commands {
@@ -207,16 +216,44 @@ button:hover {
 
 .command-icon {
     height: 30px;
-    filter: invert(51%) sepia(6%) saturate(206%) hue-rotate(91deg) brightness(91%) contrast(86%);
+    filter: invert(17%) sepia(6%) saturate(206%) hue-rotate(91deg) brightness(91%) contrast(86%);
 }
 
 .announcements-container {
     display: grid;
-    gap: 10px;
+    gap: 15px;
 }
 
+.announce-title {
+    font-weight: 500;
+    font-size: 2vh;
+    padding-bottom: 0.2vh;
+    border-top: 1px solid #58595c;
+    padding-top: 1.6vh;
+}
+
+.announce-top{
+    border-top: none;
+    padding-top: 0;
+}
+
+.desc, .announce-desc, .trending-project {
+    color: #58595c;
+}
+
+.announce-desc {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    -webkit-line-clamp: 3;
+    font-size: 1.8vh;
+}
+    
 .trending-container {
     display: grid;
     grid-template-columns: 1fr 4fr;
-    gap: 10px;
+    row-gap: 24px;
+    column-gap: 8px;
+    padding: 3.5vh 1.6vw 3.5vh 1.6vw;
+    align-items: center;
 }
